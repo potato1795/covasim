@@ -537,23 +537,27 @@
       ctx.fillStyle = C.highlight;
       ctx.font = '16px monospace';
       ctx.textAlign = 'center';
-      ctx.fillText('COVA SIMULATOR', 120, 30);
+      ctx.fillText('COVA SIMULATOR', 120, 20);
 
-      drawSprite(120, 50, state.color, 1, 0, 1);
+      drawSprite(120, 40, state.color, 1, 0, 1);
 
       ctx.fillStyle = C.text;
       ctx.font = '8px monospace';
       ctx.textAlign = 'left';
       ctx.fillStyle = '#00FF00';
 
-      ctx.fillText('REGLAS', 10, 80);
+      ctx.fillText('Controles:', 10, 60);
+
+      ctx.fillText('REGLAS', 10, 85);
       ctx.fillStyle = C.text;
 
-      ctx.fillText('1. Bebe para gustar más y ganar más puntos por', 10, 90);
-      ctx.fillText('cada conversación', 10, 100);
-      ctx.fillText('2. Es necesario beber al hablar con 3 chicas', 10, 110);
-      ctx.fillText('3. Cova da Vella cierra a las 5am', 10, 120);
-      ctx.fillText('4. Si bebes mucho se invertirán los controles', 10, 130);
+      ctx.fillText('← ↑ ↓ →: moverse          Space: hablar', 30, 70);
+
+      ctx.fillText('1. Bebe para gustar más y ganar más puntos por', 10, 95);
+      ctx.fillText('cada conversación', 10, 105);
+      ctx.fillText('2. Es necesario beber al hablar con 3 chicas', 10, 115);
+      ctx.fillText('3. Cova da Vella cierra a las 5am', 10, 125);
+      ctx.fillText('4. Si bebes mucho se invertirán los controles', 10, 135);
 
       const blink = Math.floor(Date.now() / 500) % 2;
       if (blink) {
